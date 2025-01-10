@@ -13,12 +13,11 @@ const ThemeToggle = () => {
 	};
 
 	useEffect(() => {
-		// Check for saved theme preference
+		// Check for saved theme preference or use dark as default
 		const savedTheme = localStorage.getItem('theme') as Theme | null;
-		if (savedTheme) {
-			setTheme(savedTheme);
-			document.documentElement.setAttribute('data-theme', savedTheme);
-		}
+		const themeToUse = savedTheme || Theme.DARK;
+		setTheme(themeToUse);
+		document.documentElement.setAttribute('data-theme', themeToUse);
 	}, []);
 
 	return (
