@@ -4,11 +4,12 @@ A modern React application built with TypeScript and Vite, featuring a responsiv
 
 ## Features
 
-- 📊 Data Table
-- 🌓 Dark/Light Theme Support
-- ⚡ Fast Development with Vite
-- 🎨 Modern UI with Raw CSS
+- 📊 Responsive Data Table
 - 🔄 Pagination Support
+- 🌓 Dark/Light Theme Support
+- 📱 Mobile-Friendly Design
+- 🎨 Modern UI with Raw CSS
+- ⚡ Fast Development with Vite
 
 ## Prerequisites
 
