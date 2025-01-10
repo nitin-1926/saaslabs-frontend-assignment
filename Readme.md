@@ -1,51 +1,89 @@
-# Frontend Assignment
+# SaasLabs Frontend Assignment
 
+A modern React application built with TypeScript and Vite, featuring a responsive data table with pagination, theme switching, and modern UI components.
 
-## Assignment
+## Features
 
-You are required to fetch the details of the highly-rated kickstarter projects by implementing an AJAX call to their APIs.
+- 📊 Data Table
+- 🌓 Dark/Light Theme Support
+- ⚡ Fast Development with Vite
+- 🎨 Modern UI with Raw CSS
+- 🔄 Pagination Support
 
-Use the web API (link : https://raw.githubusercontent.com/saaslabsco/frontend-assignment/refs/heads/master/frontend-assignment.json) ) to fetch the details of specific projects.
+## Prerequisites
 
-## Minimum Requirements
+Before you begin, ensure you have the following installed:
 
-1. Create a table and list the following three attributes for all the projects:
-    * S.No.
-    * Percentage funded
-    * Amount pledged
+- Node.js (v18 or higher recommended)
+- npm or yarn
 
-1. Ensure that the UI is aesthetically pleasing to gain extra points.
-1. Implement pagination with maximum 5 records per page.
-1. UX should remain like you would see on an ecommerce website (Amazon, Flipkart, etc.) and edge cases should not break.
-1. Take care of last page.
+## Getting Started
 
-### Expected Output format
+1. Clone the repository:
 
-| **S.No.** | **Percentage funded** | **Amount pledged** |
-|-----------|-----------------------|--------------------|
-| 0         | 186                   | 15283              |
+```bash
+git clone https://github.com/yourusername/saaslabs-frontend-assignment.git
+cd saaslabs-frontend-assignment
+```
 
+2. Install dependencies:
 
-## Good to have
+```bash
+npm install
+# or
+yarn install
+```
 
-1. Unit tests.
-1. Accessibility.
+3. Start the development server:
 
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-## Steps for submission
+The application will be available at `http://localhost:5173`
 
-1. Fork this repo.
-1. Do changes to the above assignment.
-1. Email the assignment back to us with:
-    1. Link of the open source repo.
-    1. Link of the assignment hosted online. (You can use any free tools to host this assignment, eg. vercel, netlify or heroku). It should be accessible online for atleast 7 days.
+## Available Scripts
 
+- `npm run dev` - Starts the development server
+- `npm run build` - Creates a production build
+- `npm run preview` - Previews the production build locally
+- `npm run lint` - Runs ESLint to check code quality
+- `npm run format` - Formats code using Prettier
 
-## Frameworks Allowed
-1. React/Vanilla JS for JavaScript
-1. No framework for CSS. Only Raw CSS is allowed.
+## Tech Stack
 
-## Note
+- React 18
+- TypeScript
+- Vite
+- ESLint
+- Prettier
+- Lucide React (for icons)
 
-1. Result on platforms like codesandbox, replit are not accepted. 
-1. Private unaccessible links will lead to rejection.
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── Button/
+│   ├── Pagination/
+│   ├── Table/
+│   └── Theme/
+├── App.tsx
+├── App.css
+├── main.tsx
+└── constants.ts
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License.

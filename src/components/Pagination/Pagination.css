@@ -1,0 +1,45 @@
+/* Pagination styles */
+.pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	margin-top: 1.5rem;
+}
+
+.page-numbers {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.page-number {
+	min-width: 2rem;
+	height: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid var(--border-color);
+	background: var(--table-background);
+	color: var(--text-color);
+	border-radius: 0.375rem;
+	font-weight: 500;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.page-number:hover:not(.active) {
+	background: var(--hover-color);
+	border-color: var(--text-secondary);
+}
+
+.page-number.active {
+	background-color: var(--primary-color);
+	border-color: var(--primary-color);
+	color: white;
+}
+
+.page-dots {
+	color: var(--text-secondary);
+	user-select: none;
+}
