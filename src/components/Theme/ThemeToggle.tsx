@@ -5,6 +5,8 @@ import './ThemeToggle.css';
 
 const ThemeToggle = () => {
 	const [theme, setTheme] = useState<Theme>(Theme.DARK);
+
+	// Toggle between light and dark themes
 	const toggleTheme = () => {
 		const newTheme = theme === Theme.DARK ? Theme.LIGHT : Theme.DARK;
 		setTheme(newTheme);
@@ -13,7 +15,7 @@ const ThemeToggle = () => {
 	};
 
 	useEffect(() => {
-		// Check for saved theme preference or use dark as default
+		// Load saved theme from localStorage or use dark as default
 		const savedTheme = localStorage.getItem('theme') as Theme | null;
 		const themeToUse = savedTheme || Theme.DARK;
 		setTheme(themeToUse);

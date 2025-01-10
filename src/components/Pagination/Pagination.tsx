@@ -13,18 +13,22 @@ interface PaginationProps {
 const Pagination = (props: PaginationProps) => {
 	const { currentPage, totalPages, handlePrevPage, handleNextPage, handlePageClick } = props;
 
+	// Calculate which page numbers to display
 	const getPageNumbers = () => {
 		const pageNumbers = [];
 		const maxVisiblePages = 5;
 		const halfVisible = Math.floor(maxVisiblePages / 2);
 
+		// Calculate start and end pages for pagination display
 		let startPage = Math.max(currentPage - halfVisible, 1);
 		const endPage = Math.min(startPage + maxVisiblePages - 1, totalPages);
 
+		// Adjust start page if we're near the end
 		if (endPage - startPage + 1 < maxVisiblePages) {
 			startPage = Math.max(endPage - maxVisiblePages + 1, 1);
 		}
 
+		// Add first page and ellipsis if needed
 		if (startPage > 1) {
 			pageNumbers.push(1);
 			if (startPage > 2) {
@@ -32,10 +36,12 @@ const Pagination = (props: PaginationProps) => {
 			}
 		}
 
+		// Add visible page numbers
 		for (let i = startPage; i <= endPage; i++) {
 			pageNumbers.push(i);
 		}
 
+		// Add last page and ellipsis if needed
 		if (endPage < totalPages) {
 			if (endPage < totalPages - 1) {
 				pageNumbers.push('...');

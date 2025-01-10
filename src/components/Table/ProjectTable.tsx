@@ -5,6 +5,7 @@ import Pagination from '../Pagination/Pagination';
 import './ProjectTable.css';
 import Table from './Table';
 
+// Column definitions for the project table
 const columnData = [
 	{ label: 'S.No.', key: 's.no' },
 	{ label: 'Title', key: 'title' },
@@ -35,9 +36,11 @@ const ProjectTable = () => {
 		setCurrentPage(page);
 	};
 
+	// Calculate pagination indexes
 	const indexOfLastProject = currentPage * PROJECTS_PER_PAGE;
 	const indexOfFirstProject = indexOfLastProject - PROJECTS_PER_PAGE;
 
+	// Fetch projects from API
 	const fetchProjects = async () => {
 		try {
 			const response = await fetch(API_URL);
